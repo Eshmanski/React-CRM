@@ -18,8 +18,6 @@ function Home() {
             value = target.value;
         const newUserInfo = Object.assign(userInfo, {[name]: value})
         setUserInfo(newUserInfo);
-
-        console.log(userInfo);
     }
 
     const handleAddLead = (event) => {
