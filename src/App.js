@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PageNotFound from './components/PageNotFaund';
 import Navigation from './components/navigation/Navigation'
-import Home from './components/Home';
+import Home from './components/home/Home';
 import Leads from './components/leads/Leads';
 import Lead from './components/lead/lead'
 import './App.css';

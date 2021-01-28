@@ -1,0 +1,23 @@
+[33mcommit d0e2dffa63a1d9d8ce5e1c7124f10404ce77905b[m[33m ([m[1;36mHEAD -> [m[1;32mHM4[m[33m)[m
+Author: Eshmanski <Eshmanski@gmail.com>
+Date:   Thu Jan 28 00:57:26 2021 +0300
+
+    Added inputs for Home componet
+
+[33mcommit b02ed80386a42bf0becb0b0193c317b8d64b1602[m
+Author: Eshmanski <Eshmanski@gmail.com>
+Date:   Thu Jan 28 00:55:16 2021 +0300
+
+    lesson #4 & refactoring
+
+[33mcommit 1704fe68b74c4c99c3d3bb306000e15f2c0097bb[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m, [m[1;32mNW3[m[33m)[m
+Author: Eshmanski <Eshmanski@gmail.com>
+Date:   Sun Jan 24 16:56:42 2021 +0300
+
+    Дз по react №3
+
+[33mcommit a47aad82aa4142027a7db7460711cf6f49a4d078[m[33m ([m[1;32mHW3[m[33m)[m
+Author: Eshmanski <Eshmanski@gmail.com>
+Date:   Sat Jan 23 19:10:13 2021 +0300
+
+    Initialize project using Create React App
