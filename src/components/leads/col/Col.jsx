@@ -1,9 +1,9 @@
-import { Card } from '@material-ui/core';
+import { Card, Button } from '@material-ui/core';
 import className from 'classnames';
 import {  useHistory } from 'react-router-dom';
 import s from './col.module.css';
 
-function Col({name, leads}) {
+function Col({name, leads, onClick}) {
     const leadsColumn = leads.filter(item => item.status === name),
         history = useHistory();
 
@@ -20,14 +20,23 @@ function Col({name, leads}) {
         )
     }
 
+
+
     return (
         <>
             {leadsColumn.map(({ id, title, phone, date }) =>
-                <Card className={s.card} onClick={() => handleClick(id)} key={id}>
-                    <div className={s.cardName}>{title}</div>
-                    <div className={s.cardPhone}>{phone}</div>
-                    <div className={s.cardDate}>{date}</div>
+            <div key={id}>
+                <Card className={s.card}>
+                    <div onClick={() => handleClick(id)}>
+                        <div className={s.cardName}>{title}</div>
+                        <div className={s.cardPhone}>{phone}</div>
+                        <div className={s.cardDate}>{date}</div>
+                    </div>
+                    <Button className={s.btn} onClick={(event) => onClick(event, id)} variant='contained' type='button'>
+                        Удалить
+                    </Button>
                 </Card>
+            </div>
             )}
         </>
     )

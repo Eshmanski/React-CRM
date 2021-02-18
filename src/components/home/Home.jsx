@@ -14,19 +14,16 @@ function Home() {
 
     const handleChange = (event) => {
         const value = event.target.value,
-            name = event.target.name,
-            copyFormProps = Object.assign({}, formProps);
+            name = event.target.name;
 
-        copyFormProps[name] = value;
-
-        setFormProps(copyFormProps);
+        setFormProps({...formProps, [name]: value});
     }
 
     const handleAddLead = (event) => {
         const { firstName, secondName, phone, description } = formProps,
             date = new Date(),
             lead = {
-                id: leads.length,
+                id: leads.length ? leads[leads.length-1].id + 1 : 0,
                 title: firstName + ' ' + secondName,
                 status: 'todo',
                 phone: phone,

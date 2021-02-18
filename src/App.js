@@ -4,7 +4,8 @@ import PageNotFound from './components/PageNotFaund';
 import Navigation from './components/navigation/Navigation'
 import Home from './components/home/Home';
 import Leads from './components/leads/Leads';
-import Lead from './components/lead/lead';
+import Lead from './components/lead/Lead';
+import LeadRed from './components/leadEdit/LeadEdit';
 import {getItem, setItem} from './utils';
 import './App.css';
 
@@ -112,6 +113,12 @@ function App() {
           path='/leads/:id'
           exact
           component={Lead}
+        />
+
+        <Route
+          path='/leads/:id/edit'
+          exact
+          component={LeadRed}
         />
 
         <Route

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { LeadsContext } from '../../App.js';
 import s from './leads.module.css';
-import Col from '../col/Col';
+import Col from './col/Col';
 
 
 const statuses = [
@@ -26,14 +26,22 @@ const statuses = [
 
 
 function Leads() {
-    const { leads } = useContext(LeadsContext);
+    const { leads, removeLead } = useContext(LeadsContext);
+
+    function delLead(event, id) {
+        const result = leads.filter(item => item.id !== Number(id));
+    
+        removeLead(result);
+    
+        event.preventDefault();
+    }
 
     return (
         <div className={s.cols}>
             {statuses.map(({ id, title, name }) =>
                 <div key={id}>
                     <div className={s.colHeader} >{title}</div>
-                    <Col name={name} leads={leads} />
+                    <Col name={name} leads={leads} onClick={delLead} />
                 </div>
             )}
         </div>
